@@ -29,13 +29,13 @@ public class TransposeStringTest {
     }
 
     @Test
-    public void givenInputStringShouldReturnAStringWithSortedWordsInAlphabeticalOrder()
+    public void givenInputStringShouldReturnAStringWithWordsInReverse()
     {
 //        act
-        String input= "world is beautiful";
+        String input= "a quick brown fox jumps over the lazy dog";
         String actualResult=transposeString.transposeWordsOfAString(input);
 //        assert
-        String expectedResult= "dlrow si lufituaeb";
+        String expectedResult= "a kciuq nworb xof spmuj revo eht yzal god";
         assertEquals(expectedResult,actualResult);
 
     }
