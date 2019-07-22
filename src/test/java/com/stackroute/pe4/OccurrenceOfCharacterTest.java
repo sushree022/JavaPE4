@@ -28,7 +28,7 @@ public class OccurrenceOfCharacterTest {
     }
 
     @Test
-    public void givenStringInputShouldReturnAnInteger()
+    public void givenStringInputShouldReturnNumberOfOccurrenceOfCharacterA()
     {
 //        act
         String input= "Java is java again java again";
@@ -38,7 +38,7 @@ public class OccurrenceOfCharacterTest {
     }
 
     @Test(expected = NullPointerException.class)
-    public void givenStringShouldReturnNullPointerException()
+    public void givenEmptyStringShouldReturnNullPointerException()
     {
         this.occurrenceOfCharacter.noOfOccurrenceOfCharacter(null);
     }

@@ -28,7 +28,7 @@ public class NameMatcherTest {
     }
 
     @Test
-    public void givenStringInputShouldReturnBooleanTrue()
+    public void givenStringInputShouldReturnTrue()
     {
 //        act
         String input= "This is Harry";
@@ -39,7 +39,7 @@ public class NameMatcherTest {
     }
 
     @Test
-    public void givenStringInputShouldReturnBooleanFalse()
+    public void givenStringInputShouldReturnFalse()
     {
 //        act
         String input= "This is marry";
@@ -49,19 +49,11 @@ public class NameMatcherTest {
         assertEquals(expectedResult,actularesult);
     }
 
-    @Test
-    public void givenStringInputWithCharactersAfterHarryShouldReturnBooleanTrue()
-    {
-//        act
-        String input= "Is this Harry?";
-        Boolean actularesult= nameMatcher.matchingString(input);
-//        assert
-        Boolean expectedResult= true;
-        assertEquals(expectedResult,actularesult);
-    }
+
     @Test(expected = NullPointerException.class)
-    public void givenStringShouldReturnNullPointerException()
+    public void givenEmptyStringShouldReturnNullPointerException()
     {
+
         this.nameMatcher.matchingString(null);
     }
 }

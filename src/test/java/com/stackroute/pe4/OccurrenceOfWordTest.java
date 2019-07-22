@@ -31,7 +31,7 @@ public class OccurrenceOfWordTest {
     }
 
     @Test
-    public void givenStringInputShouldReturnAString()
+    public void givenStringInputShouldReturnAStringSpecifyingIndexForse()
     {
 //        act
         String input= "She sells seashells by the seashore";
@@ -42,8 +42,19 @@ public class OccurrenceOfWordTest {
         assertEquals(expectedResult,actulaResult);
     }
 
+    @Test
+    public void givenStringInputShouldReturnAStringSpecifyingIndexForhe()
+    {
+//        act
+        String input= "She sells seashells by the seashore";
+        String repeatWord="he";
+        String actulaResult= occurrenceOfWord.occurrenceOfParticularWord(input, repeatWord);
+//        assert
+        String expectedResult= "Found at:1-3\n" +"Found at:14-16\n" + "Found at:24-26";
+        assertEquals(expectedResult,actulaResult);
+    }
     @Test(expected = NullPointerException.class)
-    public void givenStringShouldReturnNullPointerException()
+    public void givenEmptyStringShouldReturnNullPointerException()
     {
         this.occurrenceOfWord.occurrenceOfParticularWord(null, null);
     }

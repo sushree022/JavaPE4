@@ -1,16 +1,28 @@
 package com.stackroute.pe4;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class SortInAlphabeticalOrder {
     public String sortWordInAlphabeticalOrder(String input)
     {
-        String[] arrayOfwords= input.split(" ");
-        ArrayList<String> wordList= new ArrayList<String>();
-        for(int i=0; i<arrayOfwords.length;i++)
-        {
 
+//        splitting String input based on space
+        String[] arrayOfwords= input.split(" ");
+        List<String> listOfWords= new ArrayList<String>();
+
+//        logic for sorting
+        for(int i=0;i<arrayOfwords.length; i++) {
+            listOfWords.add(arrayOfwords[i]);
         }
-        return null;
+        Collections.sort(listOfWords);
+        StringBuilder stringBuilder= new StringBuilder();
+        for (String string: listOfWords)
+        {
+            stringBuilder.append(string);
+            stringBuilder.append(" ");
+        }
+        return stringBuilder.toString().trim();
     }
 }

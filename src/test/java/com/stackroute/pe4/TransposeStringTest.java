@@ -37,13 +37,12 @@ public class TransposeStringTest {
 //        assert
         String expectedResult= "a kciuq nworb xof spmuj revo eht yzal god";
         assertEquals(expectedResult,actualResult);
-
     }
+
+
     @Test(expected = NullPointerException.class)
-    public void givenStringShouldReturnNullPointerException()
+    public void givenEmptyStringShouldReturnNullPointerException()
     {
         this.transposeString.transposeWordsOfAString(null);
     }
-
-
 }

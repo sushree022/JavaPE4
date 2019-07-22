@@ -32,15 +32,36 @@ public class SortInAlphabeticalOrderTest {
     public void givenInputStringShouldReturnAStringWithSortedWordsInAlphabeticalOrder()
     {
 //        act
-        String input= "world is beautiful";
+        String input= "our world is beautiful";
         String actualResult=sortInAlphabeticalOrder.sortWordInAlphabeticalOrder(input);
 //        assert
-        String expectedResult= "dlorw is abefiltuu";
+        String expectedResult= "beautiful is our world";
         assertEquals(expectedResult,actualResult);
-
     }
+    @Test
+    public void givenInputStringWithUpperCaseShouldReturnAStringWithSortedWordsInAlphabeticalOrder()
+    {
+//        act
+        String input= "Our World Is Beautiful";
+        String actualResult=sortInAlphabeticalOrder.sortWordInAlphabeticalOrder(input);
+//        assert
+        String expectedResult= "Beautiful Is Our World";
+        assertEquals(expectedResult,actualResult);
+    }
+
+    @Test
+    public void givenInputStringWithNumbersShouldReturnAStringWithNumbersFirstAndSortedWordsInAlphabeticalOrder()
+    {
+//        act
+        String input= "Our World Is 567 Beautiful";
+        String actualResult=sortInAlphabeticalOrder.sortWordInAlphabeticalOrder(input);
+//        assert
+        String expectedResult= "567 Beautiful Is Our World";
+        assertEquals(expectedResult,actualResult);
+    }
+
     @Test(expected = NullPointerException.class)
-    public void givenStringShouldReturnNullPointerException()
+    public void givenEmptyStringShouldReturnNullPointerException()
     {
         this.sortInAlphabeticalOrder.sortWordInAlphabeticalOrder(null);
     }

@@ -38,8 +38,19 @@ public class ReplacementOfCharacterTest {
         String expectedResult= "faity fry";
         assertEquals(expectedResult,actualResult);
     }
+
+    @Test
+    public void givenInputStringWithUppercaseShouldReturnStringWithReplacedCharacters() {
+//        act
+        String input = "Daily Lie";
+        String actualResult = replacementOfCharacter.replaceCharacter(input);
+//        assert
+        String expectedResult = "faity tie";
+        assertEquals(expectedResult, actualResult);
+    }
+
     @Test(expected = NullPointerException.class)
-    public void givenStringShouldReturnNullPointerException()
+    public void givenEmptyStringShouldReturnNullPointerException()
     {
         this.replacementOfCharacter.replaceCharacter(null);
     }
