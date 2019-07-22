@@ -38,5 +38,9 @@ public class ReplacementOfCharacterTest {
         String expectedResult= "faity fry";
         assertEquals(expectedResult,actualResult);
     }
-
+    @Test(expected = NullPointerException.class)
+    public void givenStringShouldReturnNullPointerException()
+    {
+        this.replacementOfCharacter.replaceCharacter(null);
+    }
 }

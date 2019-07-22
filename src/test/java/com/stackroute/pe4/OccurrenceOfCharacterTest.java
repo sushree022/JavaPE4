@@ -37,4 +37,10 @@ public class OccurrenceOfCharacterTest {
         assertEquals(10,actularesult);
     }
 
+    @Test(expected = NullPointerException.class)
+    public void givenStringShouldReturnNullPointerException()
+    {
+        this.occurrenceOfCharacter.noOfOccurrenceOfCharacter(null);
+    }
+
 }
